@@ -28,3 +28,47 @@ No idea if there is a better way to do this, but:
 
 
 TODO: Add a conda environment `.yml` file for the Flask dependencies
+
+-------------------------------------------------------------------------
+
+How to run\
+<u>Terminal 1</u>\
+The following steps are required only once after you have checked out the code.\
+$ npx create-react-app gwr
+
+Copy all the files from the ReactApp folder and paste them in gwr folder
+
+<u>Terminal 2</u>
+$ export FLASK_APP=api
+$ flask run
+
+Let the flask app complete building the graph and be ready to serve web requests. That is, wait until you see the following line at the prompt:\
+\* Running on htpp://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+Then, go to Terminal 1
+
+<u>Terminal 1</u>
+$ cd gwr
+$ npm start
+
+Errors:
+1. ./src/index.js\
+Module not found: Can't resolve 'semantic-ui-css/semantic.min.css'\
+Solution:\
+$ yarn add semantic-ui-css
+
+2. Error: [BABEL] /mnt/e/Code/Python/Flask Applications/GoodReadsGraph/gwr/src/index.js: Cannot find module '@babel/helper-builder-react-jsx'
+Solution:\
+$ yarn add @babel/helper-builder-react-jsx
+
+3. return jsonify({"image_url": ouput_URL}), 200\
+NameError: name 'ouput_URL' is not defined\
+Solution:\
+api/app.py\
+Line 58: change ouput_URL to output_URL\
+Make the same change in lines 46 and 47.
+
+For some reason, the book recommendation does not appear unless you refresh the page.\
+That is, Enter 'Neuromancer' in the input text field and click Add.\
+In the text field, you will see 'We found your favorite book!'.\
+Then, refresh the webpage (F5 or Ctrl-R) and the recommended book will appear below the Add button.
