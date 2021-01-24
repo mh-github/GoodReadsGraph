@@ -38,8 +38,8 @@ $ npx create-react-app gwr
 
 Copy all the files from the ReactApp folder and paste them in gwr folder
 
-<u>Terminal 2</u>
-$ export FLASK_APP=api
+<u>Terminal 2</u>\
+$ export FLASK_APP=api\
 $ flask run
 
 Let the flask app complete building the graph and be ready to serve web requests. That is, wait until you see the following line at the prompt:\
@@ -47,8 +47,8 @@ Let the flask app complete building the graph and be ready to serve web requests
 
 Then, go to Terminal 1
 
-<u>Terminal 1</u>
-$ cd gwr
+<u>Terminal 1</u>\
+$ cd gwr\
 $ npm start
 
 Errors:
@@ -57,7 +57,7 @@ Module not found: Can't resolve 'semantic-ui-css/semantic.min.css'\
 Solution:\
 $ yarn add semantic-ui-css
 
-2. Error: [BABEL] /mnt/e/Code/Python/Flask Applications/GoodReadsGraph/gwr/src/index.js: Cannot find module '@babel/helper-builder-react-jsx'
+2. Error: [BABEL] /mnt/e/Code/Python/Flask Applications/GoodReadsGraph/gwr/src/index.js: Cannot find module '@babel/helper-builder-react-jsx'\
 Solution:\
 $ yarn add @babel/helper-builder-react-jsx
 
