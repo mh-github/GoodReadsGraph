@@ -76,5 +76,5 @@ Then, refresh the webpage (F5 or Ctrl-R) and the recommended book will appear be
 
 The Python notebook having the whole application code also has errors.\
 The path to the `ratings.csv` and `books.csv` had to be corrected by prepending with api/ as follows:\
-`uir = pd.read_csv("api/data/goodbooks-10k-master/ratings.csv")`
+`uir = pd.read_csv("api/data/goodbooks-10k-master/ratings.csv")`\
 `books = pd.read_csv("api/data/goodbooks-10k-master/books.csv")`
