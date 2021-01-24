@@ -43,8 +43,8 @@ def input_book():
         logger.debug(book)
 
         # Set the global url to be the large version of the input url
-        global ouput_URL
-        ouput_URL = large_url(str(book.image_url))
+        global output_URL
+        output_URL = large_url(str(book.image_url))
         # Return the image URL to be displayed on our app
         #    NB: POST does not support anything else.
         return "Done", 201
@@ -55,4 +55,4 @@ def input_book():
 @main.route('/novel_novel', methods=['GET'])
 def novel_novel():
     logger.debug("GET method returning output_url")
-    return jsonify({"image_url": ouput_URL}), 200
+    return jsonify({"image_url": output_URL}), 200
